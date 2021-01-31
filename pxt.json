@@ -2,7 +2,8 @@
     "name": "Platform Ultra",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "files": [
         "main.blocks",
