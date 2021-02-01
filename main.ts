@@ -117,6 +117,8 @@ function startLevel () {
         tiles.setTilemap(tilemap`level1`)
     } else if (Level == 1) {
         tiles.setTilemap(tilemap`Level2`)
+    } else if (Level == 2) {
+        tiles.setTilemap(tilemap`Level3`)
     } else {
         game.over(true)
     }
@@ -362,6 +364,12 @@ function startLevel () {
             . . . . . . . . . . . . . . . . 
             `],
         100,
+        true
+        )
+        animation.runMovementAnimation(
+        coin,
+        animation.animationPresets(animation.bobbing),
+        2000,
         true
         )
     }
