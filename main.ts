@@ -16,7 +16,45 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Portal`, function (sprite, lo
     startLevel()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-	
+    game.setDialogCursor(img`
+        . . . . . . . . 4 . . . . . . . 
+        . . . . . . . . 4 . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . 4 . . . . . . . 
+        . . . . . . . . 4 . . . . . . . 
+        . . . . . . . . 4 . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . 4 . . . . . . . 
+        4 4 4 . . . . 4 4 . . . . 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 . . . . . . . . . . 4 4 4 
+        `)
+    game.setDialogFrame(img`
+        2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        2 5 5 2 2 2 2 2 2 2 2 2 2 5 5 
+        2 5 2 5 5 5 5 5 5 5 5 5 5 2 5 
+        2 5 2 5 5 2 2 2 2 2 2 5 5 2 5 
+        2 5 2 5 2 5 5 5 5 5 5 2 5 2 5 
+        2 5 2 5 2 5 5 2 2 5 5 2 5 2 5 
+        2 5 2 5 2 5 2 5 5 2 5 2 5 2 5 
+        2 5 2 5 2 5 5 2 5 2 5 2 5 2 5 
+        2 5 2 5 2 5 5 5 5 2 5 2 5 2 5 
+        2 5 2 5 5 2 2 2 2 5 5 2 5 2 5 
+        2 5 2 5 5 5 5 5 5 5 5 2 5 2 5 
+        2 5 5 2 2 2 2 2 2 2 2 5 5 2 5 
+        2 5 5 5 5 5 5 5 5 5 5 5 5 2 5 
+        5 2 2 2 2 2 2 2 2 2 2 2 2 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        `)
+    game.splash("Wow you have found the tresure...")
+    game.splash("But what is inside?")
+    game.splash("It is the most valuable thing in this little world...")
+    game.splash("Its you.")
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.coin, function (sprite, otherSprite) {
     music.baDing.play()
